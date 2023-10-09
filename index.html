@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>MYPES | Home</title>
+  <link href="style.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="icon" type="image/x-icon" href="images.png">
+  <link href="https://fonts.cdnfonts.com/css/copperplate" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <img src="images.png" alt="MYPES Logo">
+    <h1>PROJECT EULER SOLUTIONS</h1>
+
+  </header>
+  <br> <br>
+  <div class="progress">
+    <div class="progress-container">
+      <label> M </label>
+      <label> A</label>
+      <label> T</label>
+      <label> H</label>
+      <label> S</label>
+      <label> &nbsp;</label>
+      <label>&</label>
+      <label> &nbsp;</label>
+      <label> C</label>
+      <label> O</label>
+      <label> M</label>
+      <label> P</label>
+      <label> S</label>
+      <label> C</label>
+      <label> I</label>
+    </div>
+  </div>
+  <div class="hamburger-menu">
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
+
+    <ul class="menu__box">
+      <li><a class="menu__item" href="index.html">Home</a></li>
+      <li><a class="menu__item" href="#">Solutions</a></li>
+      <li><a class="menu__item" href="#">About</a></li>
+      <li><a class="menu__item" href="#">Contact</a></li>
+      <li><a class="menu__item" href="#">Bonus Content+</a></li>
+    </ul>
+
+
+<div class="ontop"><h3>For more than a year, MYPES has stood as the go-to destination for swift access to online solutions for renowned Project Euler problems.</h3></div>
+<section>
+    <h2>Who we are</h2>
+    <div class="line"></div>
+    <p>We aim to be the premier platform for Project Euler solutions. Our focus is on effective problem-solving and helpful contributions. Join us a community dedicated to understanding the intricacies of Project Euler challenges.   </p>
+</section>
+<div class="stats"> 
+    <div class="line1"></div>
+    <h2>2023</h2>
+    <p>Date founded by <br> Matthieu and Yussef</p>
+    <div class="line2"></div>
+    <div class="title2"><h2 class="h21">9</h2></div>
+    <div class="sectiontwo">
+    <p>Number of problems <br> solved so far</p></div>
+    <div class="line3"></div>
+    <div class="title3"><h2 class="h22">1</h2></div>
+    <div class="hashtag"><p>#</p></div>
+    <p> Most popular site for <br> Project Euler Solutions</p>
+</div>
+<section class="contribute-section">
+    <h2>Contribute to our Project</h2>
+    <img src="guy sitting at seat.png" alt="Man sitting at Desk Artistic">
+    <form action="https://formsubmit.co/myprojecteuller@gmail.com" method="POST" enctype="multipart/form-data">    
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <input type="hidden" name="_cc" value="matthieu.fulhaber@gmail.com">
+        <input type="hidden" name="_subject" value="New submission!">
+
+
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <input type="hidden" name="_autoresponse" value="Thanks for submitting your contribution to our evergrowing non-profit organisation. We will get back to you as soon as possible, however, please note that response time may vary based on the complexity of the unsolved problem.In the meantime, feel free to check out some extra Maths related content to keep you occupied in the Bonus Content+ section of our home page.
+        Kind Regards,
+        The MYPES team">
+
+    
+        <label for="message">Contribution:</label>
+        <textarea id="message" name="message" required></textarea>
+        <input type="hidden" name="_template" value="table">
+        <label for="Files" name="message">Upload Files:</label>
+        <input type="file" name="attachment" accept="image/png, image/jpeg, image/jpg">
+        <input type="submit" value="Submit">
+      </form>
+    
+  </section>
+<button class="btn btn-sm btn-primary rounded-circle position-fixed bottom-0 end-0 translate-middle d-none" onclick="scrollToTop()" id="back-to-up">
+    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+<br><br><br><br><br><br>
+<br><br><br><br><br>
+<br>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      var inputs = $(".progress-container label");
+
+      for (var i = 1; i <= inputs.length; i++) {
+        var time = (inputs.length - i) * 100;
+        var delay = i * 100;
+        $(".progress-container label:nth-child(" + i + ")").css(
+          "-webkit-animation",
+          "anim 5s " + delay + "ms infinite ease-in-out"
+        );
+        $(".progress-container label:nth-child(" + i + ")").css(
+          "animation",
+          "anim 5s " + delay + "ms infinite ease-in-out"
+        );
+      }
+    });
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // JavaScript to handle the scroll event
+    document.addEventListener('DOMContentLoaded', function () {
+      var backgrounds = document.querySelectorAll('.background');
+      var scrollTimer;
+  
+      window.addEventListener('scroll', function () {
+        clearTimeout(scrollTimer);
+  
+        // Add a delay to reduce the frequency of background change
+        scrollTimer = setTimeout(function () {
+          // Calculate the scroll position
+          var scrollPosition = window.scrollY || window.pageYOffset;
+  
+          // Calculate opacity based on scroll position (adjust as needed)
+          var opacity = Math.min(1, scrollPosition / 500);
+  
+          // Apply opacity to both backgrounds
+          backgrounds.forEach(function (bg) {
+            bg.style.opacity = 1 - opacity; // Inverse of the other background
+          });
+        }, 50); // Adjust the delay time as needed
+      });
+    });
+  </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+                         
+                        
+                           
+</body>
+</html>
